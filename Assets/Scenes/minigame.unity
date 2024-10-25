@@ -3403,16 +3403,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 7db97339079a23e4089145ca5ca00475, type: 2}
-  m_DrawDistance: 1000
-  m_FadeScale: 0.9
+  m_DrawDistance: 10
+  m_FadeScale: 1
   m_StartAngleFade: 0
-  m_EndAngleFade: 180
-  m_UVScale: {x: 1.0032799, y: 6.732456}
-  m_UVBias: {x: 0.00000011920929, y: -11.741819}
+  m_EndAngleFade: 38.720932
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
   m_DecalLayerMask: 1
   m_ScaleMode: 0
-  m_Offset: {x: 0.0016400814, y: -0.33768338, z: 121.351105}
-  m_Size: {x: 1.0032799, y: 0.9565805, z: 243.54233}
+  m_Offset: {x: 0, y: 0, z: 120}
+  m_Size: {x: 1, y: 1, z: 240}
   m_FadeFactor: 1
 --- !u!4 &779841847
 Transform:
@@ -3422,8 +3422,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779841844}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.03, y: -0.587, z: 0.3}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.059, y: 0.88, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3572,7 +3572,7 @@ Transform:
   m_GameObject: {fileID: 804902977}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.474, z: 0}
+  m_LocalPosition: {x: 0.07900047, y: 1.1209993, z: 0.049999475}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3599,11 +3599,11 @@ MonoBehaviour:
   WinText: {fileID: 1899363282}
   winTextObject: {fileID: 1899363280}
   camara: {fileID: 961739749}
-  jumpSpeed: 30
+  jumpSpeed: 1
   doubleJ: 1
   drop: 25
   lastGroundedAtTime: -1
-  jumpHoldDuration: 0.2
+  jumpHoldDuration: 0.1
   wallJ: 1
   WJduration: 0.1
   BVelocity: {x: 0, y: 0, z: 0}
@@ -8188,8 +8188,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 203844589}
   - {fileID: 961739753}
-  - {fileID: 804902982}
   - {fileID: 779841847}
+  - {fileID: 804902982}
   - {fileID: 1153275178}
   - {fileID: 1231530397}
   - {fileID: 1145888631}

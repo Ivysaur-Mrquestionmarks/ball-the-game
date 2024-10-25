@@ -61,12 +61,13 @@ public class Playercontroller : MonoBehaviour
         {
             lastGroundedAtTime = Time.time + WJduration;
             wallJ = false;
-            rb.velocity = new Vector3(20 * wallSpeed.x, rb.velocity.y * 1.1f, 20 * wallSpeed.z);
+            //rb.velocity = new Vector3(20 * wallSpeed.x, rb.velocity.y * 1.1f, 20 * wallSpeed.z);
+            rb.velocity = new Vector3(20 * wallSpeed.x, 0.0f, 20 * wallSpeed.z);
         }
         else if (Input.GetButtonDown("Jump") && doubleJ) //Double jump (after wall jump in the if chain so you can still wall jump and then double jump)
         {
             lastGroundedAtTime = Time.time;
-
+            rb.velocity = new Vector3(rb.velocity.x, (rb.velocity.y >= 0 ? rb.velocity.y:0), rb.velocity.z);
             //rb.AddForce(new Vector3(0.0f, jumpSpeed, 0.0f));
             doubleJ = false;
         }
@@ -76,7 +77,9 @@ public class Playercontroller : MonoBehaviour
         //{
 
         //Lo que nos dijiste de hacer que el salto dure más entre más se unda el boton
-        rb.AddForce(new Vector3(0.0f, jumpSpeed * (Keyboard.current.spaceKey.isPressed && Time.time < lastGroundedAtTime + jumpHoldDuration ? 1 : 0), 0.0f));
+        //rb.AddForce(new Vector3(0.0f, jumpSpeed * (Keyboard.current.spaceKey.isPressed && Time.time < lastGroundedAtTime + jumpHoldDuration ? 1 : 0), 0.0f));
+        rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y+ jumpSpeed * (Keyboard.current.spaceKey.isPressed && Time.time < lastGroundedAtTime + jumpHoldDuration ? 1 : 0), rb.velocity.z);
+        
     }
 
     void OnTriggerEnter(Collider other)
