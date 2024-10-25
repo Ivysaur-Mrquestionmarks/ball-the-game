@@ -243,7 +243,7 @@
         "affectsEmission": false,
         "drawOrder": 0,
         "supportLodCrossFade": false,
-        "angleFade": true
+        "angleFade": false
     }
 }
 
