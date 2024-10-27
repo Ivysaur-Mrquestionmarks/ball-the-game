@@ -89,7 +89,7 @@ public class Playercontroller : MonoBehaviour
         count = count + (other.gameObject.CompareTag("PickUp")?1:0);
         other.gameObject.SetActive(!other.gameObject.CompareTag("PickUp"));  
         winTextObject.SetActive(other.gameObject.CompareTag("Goal"));
-        WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: "+ Time.time;
+        WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: "+ Time.time +"\nSong used Game 3 loop thing, by Rig\nLink in the read me file.";
 
     }
 
