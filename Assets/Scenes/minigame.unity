@@ -3586,6 +3586,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 872428930680035800, guid: 187f11a720d46394f8ba4eafac042676,
         type: 3}
+      propertyPath: speed
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 872428930680035800, guid: 187f11a720d46394f8ba4eafac042676,
+        type: 3}
       propertyPath: camara
       value: 
       objectReference: {fileID: 961739749}
