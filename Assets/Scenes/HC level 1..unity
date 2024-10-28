@@ -3557,6 +3557,11 @@ PrefabInstance:
       objectReference: {fileID: 200567374}
     - target: {fileID: 872428930680035800, guid: 187f11a720d46394f8ba4eafac042676,
         type: 3}
+      propertyPath: nextLevel
+      value: HC level 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 872428930680035800, guid: 187f11a720d46394f8ba4eafac042676,
+        type: 3}
       propertyPath: winTextObject
       value: 
       objectReference: {fileID: 1899363280}
