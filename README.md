@@ -7,3 +7,5 @@ Right shift: Bounce.
 Music credits:
  Game 3 loop thing by Rig.
  Link: https://www.newgrounds.com/audio/listen/275713
+ Platform by Or4nges
+ Link: https://www.newgrounds.com/audio/listen/458694
