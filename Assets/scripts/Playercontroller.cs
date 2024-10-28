@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class Playercontroller : MonoBehaviour
 {
     public Rigidbody rb;
@@ -25,6 +26,8 @@ public class Playercontroller : MonoBehaviour
     public Vector3 wallSpeed;
     public Vector3 Startingpos;
     public float deadLayer;
+    public string nextLevel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,7 +93,9 @@ public class Playercontroller : MonoBehaviour
         other.gameObject.SetActive(!other.gameObject.CompareTag("PickUp"));  
         winTextObject.SetActive(other.gameObject.CompareTag("Goal"));
         WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: "+ Time.time +"\nSong used Game 3 loop thing, by Rig\nLink in the read me file.";
-
+        if (other.gameObject.CompareTag("Level")) {
+            SceneManager.LoadScene(nextLevel);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
