@@ -9,3 +9,5 @@ Music credits:
  Link: https://www.newgrounds.com/audio/listen/275713
  Platform by Or4nges
  Link: https://www.newgrounds.com/audio/listen/458694
+ Race aroudn the world by Waterflame
+ Link: https://www.newgrounds.com/audio/listen/110798
