@@ -11,3 +11,5 @@ Music credits:
  Link: https://www.newgrounds.com/audio/listen/458694
  Race aroudn the world by Waterflame
  Link: https://www.newgrounds.com/audio/listen/110798
+ KillSCREEN by LHPixel8
+ Link: https://www.newgrounds.com/audio/listen/1366270
