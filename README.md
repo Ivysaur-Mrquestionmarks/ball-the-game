@@ -7,9 +7,12 @@ Right shift: Bounce.
 Music credits:
  Game 3 loop thing by Rig.
  Link: https://www.newgrounds.com/audio/listen/275713
+ 
  Platform by Or4nges
  Link: https://www.newgrounds.com/audio/listen/458694
+ 
  Race aroudn the world by Waterflame
  Link: https://www.newgrounds.com/audio/listen/110798
+ 
  KillSCREEN by LHPixel8
  Link: https://www.newgrounds.com/audio/listen/1366270
