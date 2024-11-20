@@ -94,7 +94,7 @@ public class player2 : MonoBehaviour
         count = count + (other.gameObject.CompareTag("PickUp") ? 1 : 0);
         other.gameObject.SetActive(!other.gameObject.CompareTag("PickUp"));
         winTextObject.SetActive(other.gameObject.CompareTag("Goal"));
-        WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: " + Time.time + "\nSong links and credits in the read me file";
+        WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: " + Time.timeSinceLevelLoad + "\nSong links and credits in the read me file";
         if (other.gameObject.CompareTag("Level"))
         {
             SceneManager.LoadScene(nextLevel);
@@ -135,7 +135,7 @@ public class player2 : MonoBehaviour
             rb.position = Startingpos;
             rb.velocity = new Vector3(0, 0, 0);
         }
-        countText.text = "Score: " + count.ToString() + "\nTime: " + Time.time;
+        countText.text = "Score: " + count.ToString() + "\nTime: " + Time.timeSinceLevelLoad;
     }
 }
 
