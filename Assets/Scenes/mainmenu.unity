@@ -1658,7 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bdedf42e35c374286c44f8c06fa2d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: mainmenu
+  level: Ending
   Text: {fileID: 490770319}
 --- !u!114 &490770322
 MonoBehaviour:
