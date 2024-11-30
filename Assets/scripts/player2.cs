@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class player2 : MonoBehaviour
 {
@@ -97,7 +99,41 @@ public class player2 : MonoBehaviour
         WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: " + Time.timeSinceLevelLoad + "\nSong links and credits in the read me file\nTotal time: " + Time.time;
         if (other.gameObject.CompareTag("Level"))
         {
+            string destination = Application.persistentDataPath + nextLevel+".ball";
+            FileStream file;
+            float Rtime = Time.timeSinceLevelLoad;
+            float Btime = Rtime;
+            BinaryFormatter bf = new BinaryFormatter();
+
+            if (File.Exists(destination))
+            {
+                file = File.OpenRead(destination);
+
+                levelRecords Records = (levelRecords)bf.Deserialize(file);
+                bool change = Btime > Records.BestTime;
+                Btime = Records.BestTime * (change ? 1 : 0) + Btime * (change ? 0 : 1);
+                change = count < Records.BestScore;
+                count = Records.BestScore * (change ? 1 : 0) + count * (change ? 0 : 1);
+                if (!!change)
+                {
+                    change = Rtime > Records.BestTimeScore;
+                    Rtime = Records.BestTimeScore * (change ? 1 : 0) + Rtime * (change ? 0 : 1);
+                }
+                file.Close();
+            }
+            else {
+                file = File.Create(destination);
+                file.Close();
+            }
+            file = File.OpenWrite(destination);
+            levelRecords Records_ = new levelRecords(Btime,Rtime,count);
+            bf.Serialize(file, Records_);
+            file.Close();
+
+
+            //end of record
             SceneManager.LoadScene(nextLevel);
+
         }
     }
 
