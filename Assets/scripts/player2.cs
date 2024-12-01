@@ -112,13 +112,15 @@ public class player2 : MonoBehaviour
                 levelRecords Records = (levelRecords)bf.Deserialize(file);
                 bool change = Btime > Records.BestTime;
                 Btime = Records.BestTime * (change ? 1 : 0) + Btime * (change ? 0 : 1);
-                change = count < Records.BestScore;
-                count = Records.BestScore * (change ? 1 : 0) + count * (change ? 0 : 1);
-                if (!!change)
+                change = count <= Records.BestScore;             
+                Rtime = Records.BestTimeScore * (change ? 1 : 0) + Rtime * (change ? 0 : 1);
+                if (count == Records.BestScore)
                 {
                     change = Rtime > Records.BestTimeScore;
                     Rtime = Records.BestTimeScore * (change ? 1 : 0) + Rtime * (change ? 0 : 1);
                 }
+                count = Records.BestScore * (change ? 1 : 0) + count * (change ? 0 : 1);
+
                 file.Close();
             }
             else {
