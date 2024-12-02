@@ -15,8 +15,6 @@ public class player2 : MonoBehaviour
     public float speed = 10;
     public int count; //Quiero probar cosas entonces lo puse public.
     public TextMeshProUGUI countText;
-    public TextMeshProUGUI WinText;
-    public GameObject winTextObject;
     public GameObject camara;
     public float jumpSpeed;
     public bool doubleJ = true;
@@ -36,7 +34,6 @@ public class player2 : MonoBehaviour
     {
         count = 0;
         rb = GetComponent<Rigidbody>();
-        winTextObject.SetActive(false);
         //lastGroundedAtTime = Time.time;
         lastGroundedAtTime = Time.time;
         Startingpos = rb.position;
@@ -95,8 +92,6 @@ public class player2 : MonoBehaviour
 
         count = count + (other.gameObject.CompareTag("PickUp") ? 1 : 0);
         other.gameObject.SetActive(!other.gameObject.CompareTag("PickUp"));
-        winTextObject.SetActive(other.gameObject.CompareTag("Goal"));
-        WinText.text = "You won!!!\nYour score was " + count.ToString() + "\nYour time was: " + Time.timeSinceLevelLoad + "\nSong links and credits in the read me file\nTotal time: " + Time.time;
         if (other.gameObject.CompareTag("Level"))
         {
             string destination = Application.persistentDataPath + nextLevel+".ball";
