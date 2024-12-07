@@ -28,6 +28,7 @@ public class player2 : MonoBehaviour
     public Vector3 Startingpos;
     public float deadLayer;
     public string nextLevel;
+    public float escTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -159,6 +160,7 @@ public class player2 : MonoBehaviour
         //{
 
         //}
+        escTimer = escTimer + (Keyboard.current.escapeKey.isPressed ? 1 : 0);
         if (Input.GetButtonDown("Fire3"))
         { //rb position y velocity son raros, entonces no los puse branchless.
             rb.velocity = new Vector3(0.0f, -drop, 0.0f); //For making it branchless we would need to call the comparison multipletimes, which would make it inefficient.
@@ -167,6 +169,10 @@ public class player2 : MonoBehaviour
         { //misma cosa para esto.
             rb.position = Startingpos;
             rb.velocity = new Vector3(0, 0, 0);
+        }
+        
+        else if (escTimer>120) {
+            SceneManager.LoadScene("mainmenu");
         }
         countText.text = "Score: " + count.ToString() + "\nTime: " + Time.timeSinceLevelLoad;
     }
