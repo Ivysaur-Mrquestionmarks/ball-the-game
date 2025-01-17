@@ -43,9 +43,9 @@ public class player2 : MonoBehaviour
     void OnMove(InputValue movementValue)
     {
         Vector2 movementVector = movementValue.Get<Vector2>();
-        Vector3 moveX = camara.transform.right * movementVector.x * speed;
-        Vector3 moveZ = camara.transform.forward * movementVector.y * speed;
-        Vector3 moveDirection = moveX + moveZ;
+        Vector3 moveX = camara.transform.right * movementVector.x;
+        Vector3 moveZ = camara.transform.forward * movementVector.y ;
+        Vector3 moveDirection = Vector3.Normalize(moveX + moveZ) * speed;
         movementX = moveDirection.x;
         movementY = moveDirection.z;
     }

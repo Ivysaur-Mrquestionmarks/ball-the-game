@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HC level 2.unity
     guid: 988bf491ed14ade48bb15a34700354bd
   - enabled: 1
+    path: Assets/Scenes/Lava.unity
+    guid: b7182e9d1f6d5af4383ae4047c66b9a9
+  - enabled: 1
     path: Assets/Scenes/HC level 3.unity
     guid: b787ed3b37abcb74bbd542a0e5f1139f
   - enabled: 1
