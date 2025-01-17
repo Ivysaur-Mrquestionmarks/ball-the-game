@@ -5,6 +5,8 @@ Left shift: Quick drop/breaks.
 Right shift: Bounce.
 
 Music credits:
+
+
  Game 3 loop thing by Rig.
  Link: https://www.newgrounds.com/audio/listen/275713
  
@@ -16,3 +18,6 @@ Music credits:
  
  KillSCREEN by LHPixel8
  Link: https://www.newgrounds.com/audio/listen/1366270
+
+ Basalt Barrage (Volcano Stage) by AmberMP3
+ Link: https://www.newgrounds.com/audio/listen/1137132
